@@ -1,4 +1,4 @@
-// Dados estáticos consumindo URLs externas (API de imagens)
+// Dados estáticos consumindo URLs externas
 const dadosFotos = [
     { nome: "Montanha", url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=400&q=80" },
     { nome: "Praia", url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80" },
@@ -30,12 +30,12 @@ function exibirFotos(fotosParaExibir) {
         div.innerHTML = `
             <img src="${foto.url}" alt="${foto.nome}">
             <p>${foto.nome}</p>
-        `; // Nome centralizado abaixo [cite: 15]
+        `; // Nome centralizado abaixo 
         galeria.appendChild(div);
     });
 }
 
-// Busca em tempo real [cite: 24]
+// Busca em tempo real 
 campoBusca.addEventListener('input', () => {
     const termo = campoBusca.value.toLowerCase();
     const filtradas = dadosFotos.filter(foto => 
